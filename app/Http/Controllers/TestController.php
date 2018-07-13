@@ -14,10 +14,10 @@ class TestController extends Controller
         $password = env('MAIL_FETCH_PASSWORD_RO');
         $storage_path = storage_path('app/mail_attachments');
         
-        $inbox = new \PhpImap\Mailbox($hostname, $username, $password, $storage_path);
-        dd($inbox);
+        //$inbox = new \PhpImap\Mailbox($hostname, $username, $password, $storage_path);
+        
         /* try to connect */
-        //$inbox = imap_open($hostname, $username, $password) or die('Cannot connect to Gmail: ' . imap_last_error());
+        $inbox = imap_open($hostname, $username, $password) or die('Cannot connect to Gmail: ' . imap_last_error());
 
         /* grab emails */
         $emails = imap_search($inbox, 'ALL');
