@@ -11,6 +11,6 @@
         </div>
 
         <div style="margin-top:40px">
-                <a href="{{$url}}">View the idea in Handesk</a>
+                <a href="{{$url}}">View the idea in Hooves Ticketsystem</a>
         </div>
 @endsection
