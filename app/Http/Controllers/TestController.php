@@ -15,7 +15,7 @@ class TestController extends Controller
         $storage_path = storage_path('app/mail_attachments');
         
         $inbox = new \PhpImap\Mailbox($hostname, $username, $password, $storage_path);
-
+        dd($inbox);
         /* try to connect */
         //$inbox = imap_open($hostname, $username, $password) or die('Cannot connect to Gmail: ' . imap_last_error());
 
