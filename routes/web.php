@@ -13,6 +13,10 @@
 
 Route::get('/', 'HomeController@index');
 
+Route::get('test_imap', 'TestController@testImap');
+
+
+
 Auth::routes();
 
 Route::group(['prefix' => 'requester'], function () {

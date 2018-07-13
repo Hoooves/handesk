@@ -12,6 +12,8 @@ class Mailbox
         $ssl           = ($ssl == false) ? '/novalidate-cert' : '';
         $options       = $options ?: '/pop3';
         $this->mailbox = new \PhpImap\Mailbox('{'."$host:$port$options$ssl"."}$folder", $user, $pass, storage_path('app/mail_attachments'));
+        
+        // '{imap.gmail.com:993/imap/ssl}INBOX'
 
         return $this;
     }
